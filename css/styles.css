@@ -22,3 +22,42 @@
 .button-div {
   text-align: center;
 }
+
+#game-result {
+  display: none;
+  text-align: center;
+  text-decoration: underline;
+  font-family: cursive;
+}
+
+#start {
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#game-play {
+  display: none;
+  background-color: #D5FDFF;
+  text-align: center;
+  border: solid black 2px;
+}
+
+#game-play button {
+  width: 100px;
+  margin-bottom: 15px;
+}
+#game-play .btn[disabled] {
+  opacity: .25;
+}
+input {
+  margin: 5px;
+}
+
+.die-pics {
+  text-align: center;
+}
+
+/*div {
+  border: solid black 1px;
+}*/
