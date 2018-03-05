@@ -139,3 +139,53 @@ Game.prototype.initializeGame = function() {
   nextField("#start", "#game-play");
   this.toggleActiveButtons();
 }
+
+// ======================
+//  User Interface Logic
+// ======================
+
+var resetGame = function() {
+  // clear the form fields
+  $('#player1name').val('');
+  $('#player2name').val('');
+  $('#score-to-win').val(100);
+
+  // show and hide proper divs
+  nextField("#game-play", "#start");
+  $("#game-result").hide();
+  $('#player1name').focus();
+}
+var nextField = function(divHide, divShow) {
+  $(divHide).hide();
+  $(divShow).show();
+}
+
+$(document).ready(function() {
+  var currentGame = new Game();
+  $('#player1name').focus();
+
+  // event handler for game submit
+  $('#game-initializer').submit(function(event) {
+    event.preventDefault();
+    $('p.total-score').text("Total Score: ");
+    // initialize game content
+    currentGame.initializeGame();
+  });
+
+  // event handler for the roll button
+  $('button.roll').click(function() {
+    currentGame.roll();
+  });
+
+  $('button.end-turn').click(function() {
+    // $('p.total-score').text("Total Score: ");
+    currentGame.endTurn();
+  });
+  // event handler for the reset button
+  $('#reset-game').click(function() {
+    $('p.total-score').text("Total Score: ");
+    currentGame = new Game();
+    resetGame();
+  });
+
+});
