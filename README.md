@@ -22,7 +22,7 @@ Feel free to contact the authors of this project through GitHub.
 
 ## Technologies Used
 
-This project was constructed using the javascript with libraries such jQuery and Bootstrap. 
+This project was constructed using the javascript with libraries such jQuery and Bootstrap.
 ### License
 
 MIT License.
